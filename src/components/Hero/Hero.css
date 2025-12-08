@@ -1,0 +1,14 @@
+/* Hero.css */
+#animated-title .title-part {
+    display: inline-block; /* Keeps the parts inline by default */
+    margin-right: 0.5rem; /* Space between "GOLDEN" and "EVENTZ" */
+  }
+  
+  /* Media query for devices with a max-width of 600px */
+  @media (max-width: 600px) {
+    #animated-title .title-part {
+      display: block; /* Stacks the parts vertically on small screens */
+      margin-right: 0; /* Removes the margin on small screens */
+    }
+  }
+  

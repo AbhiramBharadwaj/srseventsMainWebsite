@@ -1,0 +1,54 @@
+/* Ensure the .service-content covers the full height of its container */
+.service-content {
+  position: relative;
+  height: 100%; /* Make service content fill the parent container */
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Center content vertically */
+  align-items: center; /* Center content horizontally */
+  cursor: pointer;
+  overflow: hidden; /* Hide overflowing elements */
+}
+
+/* Style for the service title to go behind the image */
+.service-title {
+  font-family: 'AutumnInNovember', sans-serif;
+  font-size: 2.8rem;
+  color: hwb(246 7% 86%);
+  position: absolute;
+  z-index: 1; /* Lower than the image and text to go behind */
+  width: 100%;
+  text-align: center;
+  top: 15%; /* Adjust as necessary */
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* Full coverage and center alignment for the image */
+.service-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%; /* Image covers the whole service-content */
+  object-fit: cover; /* Maintain aspect ratio while covering */
+  z-index: 0; /* Ensure the image stays at the back */
+}
+
+/* Text styling and transition effect */
+.service-content p {
+  font-size: 2rem; /* Adjust font size for visibility */
+  color: white;
+  text-align: center;
+  z-index: 2; /* Ensure text is above the image */
+  transition: opacity 0.5s ease;
+  opacity: 0; /* Start with text invisible */
+  position: relative;
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background for text */
+}
+
+/* Hover effect to show the description */
+.service-content:hover p {
+  opacity: 1; /* Make text visible on hover */
+}

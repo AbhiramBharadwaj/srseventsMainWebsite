@@ -1,0 +1,67 @@
+/* Import the font using CSS if not added in the HTML file */
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+
+body, .header-section, .content-container, .event-type-card, .total-cost {
+    font-family: 'Roboto', sans-serif; /* Apply Roboto font across all text on the page */
+}
+
+.header-section {
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    color: white;
+    padding: 50px 20px;
+    text-shadow: 5px 1px 5px black;
+    font-weight: 2000; /* Make header text bold */
+    font-size: 2.5rem;
+}
+
+.header-section p {
+    font-size: 0.9rem; /* Smaller font size for the subtitle */
+    margin-top: 5px; /* Space between header and subtitle */
+}
+
+.content-container {
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent background for readability */
+    padding: 20px;
+}
+
+.event-type-card {
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background-color: white;
+}
+
+.event-type-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.event-type-card.active {
+    background-color: #d7e8d5; /* Lighter sage green color for active state */
+    color: black;
+}
+
+.slider {
+    transition: opacity 0.4s ease-in-out;
+}
+
+.slider:hover {
+    opacity: 0.8;
+}
+
+.total-cost {
+    animation: fadeIn 0.5s ease-in-out;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.card:hover {
+    transform: scale(1.03);
+}

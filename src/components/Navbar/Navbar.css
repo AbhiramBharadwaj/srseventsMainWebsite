@@ -1,0 +1,63 @@
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1030;
+  width: 100%;
+  background-color: transparent;
+  box-shadow: none !important; /* Ensuring no shadow is applied */
+  border-radius: 0 !important; /* Ensuring no rounded corners */
+  overflow: visible;
+}
+
+.container-fluid {
+  margin-right: auto;
+  margin-left: auto;
+  width: 100%; /* Ensure full width to prevent any unwanted horizontal padding */
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.logo {
+  width: 40px; /* Adjust size of logo if needed */
+}
+
+.nav-link:hover {
+  color: #f0c040; /* Example hover color */
+}
+
+.show-menu {
+  transform: translateX(0);
+}
+
+.hide-menu {
+  transform: translateX(100%);
+}
+
+/* Navbar.css */
+.hide-nav {
+  transform: translateY(-100%);
+  transition: transform 0.3s ease-in-out;
+}
+
+.nav-item.dropdown {
+  position: relative; /* Ensures the dropdown is positioned relative to this item */
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%; /* Positions it right below the toggle element */
+  left: 0;
+  transform: translate(0, .5em); /* Optional: slight downward movement */
+  z-index: 1000; /* Ensures it's on top of other content */
+}
+
+.nav-item.dropdown {
+  position: relative;
+}
+

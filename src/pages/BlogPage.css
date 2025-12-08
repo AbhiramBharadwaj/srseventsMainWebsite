@@ -1,0 +1,56 @@
+.welcome-section {
+    height: 250px;  /* Increased height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-size: cover;
+    background-position: center;
+    background-image: url('../assets/background-flip3.jpeg');
+    color: white;
+    text-shadow: 1px 1px 2px black;
+    margin-top: var(--navbar-height);  /* Adjust this value based on your navbar's height */
+    font-size: 3rem;
+}
+
+@media (min-width: 768px) {
+    .welcome-section h1 {
+        text-align: left; /* Aligns text left on devices wider than 768px */
+    }
+}
+
+.bento-item {
+    transition: transform 0.3s ease-in-out, opacity 0.5s ease-in-out;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+    opacity: 0; /* Initially hidden */
+    transform: translateY(20px); /* Slide up animation */
+}
+
+.bento-item.reveal {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.card-body {
+    padding-bottom: 20px; /* Add space at the bottom of the card body */
+}
+
+.card-body p {
+    margin-bottom: 20px; /* Add space between text and button */
+}
+
+.card-img-top {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.btn-primary {
+    background-color: #007bff;
+    border: none;
+    width: 100%;
+    margin-top: 20px; /* Add space above the button */
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+}

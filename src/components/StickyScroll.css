@@ -1,0 +1,22 @@
+/* StickyScroll.css */
+
+.container-3d {
+    perspective: 1000px; /* Set the perspective for 3D effects */
+    width: 100%; /* Full width */
+    margin: auto; /* Center the container */
+    background: white; /* Background color of the container */
+    border-radius: 10px; /* Rounded corners for aesthetics */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Shadow for 3D depth effect */
+  }
+  
+  .card-3d {
+    transform-style: preserve-3d; /* Necessary to preserve 3D transformations */
+    transition: transform 0.5s; /* Smooth transition for rotation effect */
+    width: 100%; /* Full width of the card */
+  }
+  
+  .content-section {
+    margin-bottom: 2rem; /* Space between sections */
+    text-align: center; /* Center the text */
+  }
+  

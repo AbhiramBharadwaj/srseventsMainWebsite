@@ -1,0 +1,134 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@700&display=swap');
+
+/* Apply the Teachers-Light font globally */
+body {
+  font-family: "Teachers", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* Other styles... */
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%; 
+  overflow-x: hidden; 
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+.navbar {
+  position: fixed;
+  top: 0; /* Ensures the navbar is right at the top */
+  left: 0;
+  right: 0;
+  z-index: 1030; /* High z-index to keep it above other content */
+  border-bottom-left-radius: 25px;
+  border-bottom-right-radius: 25px;
+  background-color: #FFF7ED;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+
+.logo-hover {
+  transition: transform 0.3s ease-in-out;
+}
+
+.logo-hover:hover {
+  transform: scale(1.1);
+}
+
+.nav-link {
+  position: relative;
+  display: inline-block;
+  transition: all 0.3s ease;
+}
+
+.nav-link::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 0.2em;
+  bottom: 0;
+  left: 0;
+  background-color: #ffcc00;
+  visibility: hidden;
+  transform: scaleX(0);
+  transition: all 0.3s ease-in-out;
+}
+
+.nav-link:hover::before {
+  visibility: visible;
+  transform: scaleX(1);
+}
+
+.nav-link:hover {
+  color: #ffcc00;
+  text-shadow: 0 0 4px rgba(255, 204, 0, 0.8);
+  transform: scale(1.1);
+}
+
+.hover-effect {
+  position: relative;
+  display: inline-block;
+  transition: all 0.3s ease;
+}
+
+.hover-effect::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 0.2em;
+  bottom: 0;
+  left: 0;
+  background-color: #ffcc00;
+  visibility: hidden;
+  transform: scaleX(0);
+  transition: all 0.3s ease-in-out;
+}
+
+.hover-effect:hover::before {
+  visibility: visible;
+  transform: scaleX(1);
+}
+
+.hover-effect:hover {
+  color: #ffcc00;
+  text-shadow: 0 0 10px rgba(255, 204, 0, 0.8);
+  transform: scale(1.1);
+}
+
+.hover\:zoom:hover {
+  transform: scale(1.1); /* Zoom factor */
+  transition: transform 0.3s ease; /* Smooth transition */
+}
+
+.gothic-a1-regular {
+  font-family: "Gothic A1", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.teachers-bold {
+  font-family: "Teachers", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.hover:shadow-blue {
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+.hover:shadow-blue:hover {
+  box-shadow: 0 4px 20px rgba(0, 123, 255, 0.5); /* Blue light shadow */
+}
