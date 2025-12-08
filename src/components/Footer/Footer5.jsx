@@ -1,11 +1,20 @@
 import React from "react";
-import './Footer5.css';
+import "./Footer5.css";
 import { FaInstagram, FaWhatsapp, FaYoutube } from "react-icons/fa";
 import { HiLocationMarker } from "react-icons/hi";
 import { MdCall, MdMessage } from "react-icons/md";
-import { Link, useNavigate } from "react-router-dom";
-import Tippy from '@tippyjs/react';
-import 'tippy.js/dist/tippy.css'; 
+import { Link } from "react-router-dom";
+import Tippy from "@tippyjs/react";
+import "tippy.js/dist/tippy.css";
+import HeroBg from "../../assets/background-flip3.jpeg";
+
+const footerBubbles = [
+  { width: 520, height: 140, rotate: 12, gradient: "linear-gradient(90deg, rgba(99,102,241,0.15), transparent)", top: "10%", left: "-10%" },
+  { width: 460, height: 120, rotate: -14, gradient: "linear-gradient(90deg, rgba(244,114,182,0.14), transparent)", top: "50%", right: "-8%" },
+  { width: 320, height: 90, rotate: -6, gradient: "linear-gradient(90deg, rgba(124,58,237,0.12), transparent)", bottom: "18%", left: "4%" },
+  { width: 240, height: 70, rotate: 20, gradient: "linear-gradient(90deg, rgba(251,191,36,0.14), transparent)", top: "30%", right: "14%" },
+  { width: 200, height: 60, rotate: -18, gradient: "linear-gradient(90deg, rgba(34,211,238,0.14), transparent)", top: "6%", left: "18%" },
+];
 
 const Footer5 = () => {
 
@@ -14,7 +23,42 @@ const Footer5 = () => {
   };
   
   return (
-    <div className="bg-gray-800 text-white">
+    <div
+      className="relative text-white overflow-hidden"
+      style={{
+        backgroundImage: `
+          radial-gradient(circle at 20% 20%, rgba(88, 99, 191, 0.12), transparent 38%),
+          radial-gradient(circle at 80% 25%, rgba(233, 118, 97, 0.12), transparent 32%),
+          radial-gradient(circle at 50% 80%, rgba(143, 92, 220, 0.1), transparent 36%),
+          linear-gradient(180deg, rgba(3, 3, 3, 0.95), rgba(3, 3, 3, 0.97)),
+          url(${HeroBg})
+        `,
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        backgroundRepeat: "no-repeat",
+      }}
+    >
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        {footerBubbles.map((shape, idx) => (
+          <div
+            key={idx}
+            style={{
+              position: "absolute",
+              width: shape.width,
+              height: shape.height,
+              borderRadius: 9999,
+              backgroundImage: shape.gradient,
+              border: "2px solid rgba(255,255,255,0.1)",
+              boxShadow: "0 20px 60px rgba(0,0,0,0.35)",
+              transform: `rotate(${shape.rotate}deg)`,
+              top: shape.top,
+              left: shape.left,
+              right: shape.right,
+              bottom: shape.bottom,
+            }}
+          />
+        ))}
+      </div>
       <section className="max-w-[1200px] mx-auto py-8">
         <div className="grid md:grid-cols-3 gap-8">
           {/* First Column */}
@@ -25,7 +69,7 @@ const Footer5 = () => {
             </p>
             <div className="flex items-center">
               <input
-                className="py-2 px-3 flex-grow bg-gray-800 border-2 border-gray-200 focus:ring-2 focus:ring-sky-500 focus:border-sky-500"
+                className="py-2 px-3 flex-grow bg-black/30 border-2 border-gray-200/50 focus:ring-2 focus:ring-sky-500 focus:border-sky-500"
                 type="text"
                 placeholder="Email"
               />
@@ -75,8 +119,8 @@ const Footer5 = () => {
           </div>
         </div>
 
-        {/* Footer Bottom */}
-        <div className="flex flex-col sm:flex-row justify-between items-center border-t-2 border-gray-300/40 mt-6">
+          {/* Footer Bottom */}
+        <div className="flex flex-col sm:flex-row justify-between items-center border-t-2 border-white/10 mt-6">
           <div>
             <span className="text-sm text-gray-400">&copy; 2024 Created by </span>
             <Tippy content="Abhiram is a Full Stack Developer passionate about creating impactful digital experiences.">
