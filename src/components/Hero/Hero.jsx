@@ -5,7 +5,7 @@ const Hero = () => {
   return (
     <HeroGeometric
       badge="Golden Eventz & Production"
-      title1="Golden Eventz, ‎ Detailed Execution"
+      title1="Golden Eventz, Detailed Execution"
       title2="Weddings • Corporate • Music Nights"
     />
   );
