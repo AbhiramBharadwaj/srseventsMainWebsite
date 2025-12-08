@@ -29,7 +29,7 @@ const Hero = () => {
     navigate('/our-work');
   };
 
-  const title = "LIFE CELEBRATIONS";
+  const title = "Golden Eventz";
   const splitTitle = title.split("").map((letter, idx) => (
     <span key={idx} ref={(el) => textRef.current[idx] = el} className="inline-block" style={{ width: letter === ' ' ? '0.2em' : 'auto' }}>
       {letter}
@@ -45,7 +45,7 @@ const Hero = () => {
               {splitTitle}
             </h1>
             <p className="teachers-light">
-              Welcome to Life Celebrations, transform your vision into unforgettable moments. With five years of expertise, we specialize in weddings, New Year extravaganzas, and remarkable events.
+              Welcome to Golden Eventz, transform your vision into unforgettable moments. With five years of expertise, we specialize in weddings, New Year extravaganzas, and remarkable events.
             </p>
             <button
               className="bg-blue-400 text-white hover:bg-blue-500 px-4 py-1 rounded-md duration-200 teachers-light"

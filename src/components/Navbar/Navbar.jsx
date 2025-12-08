@@ -34,7 +34,7 @@ const Navbar = () => {
       <div className="container-fluid d-flex justify-content-between align-items-center">
         <Link to="/" className="navbar-brand d-flex align-items-center" style={{ textDecoration: 'none', color: textColor }}>
           <img src={Logo} alt="Logo" className="logo me-2" />
-          <span className="font-bold">Life Celebrations</span>
+          <span className="font-bold">Golden Eventz</span>
         </Link>
         <div className="d-none d-lg-flex align-items-center">
           <ul className="navbar-nav d-flex flex-row gap-3">
