@@ -1,115 +1,82 @@
-import React, { useState, useEffect } from 'react';
+import React, { useMemo, useState, useEffect, useRef } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import Logo from '../../assets/logo.png';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import 'bootstrap/dist/js/bootstrap.bundle.min.js'; // Ensure Bootstrap JavaScript is included
 import './Navbar.css';
+import { Home, Briefcase, Phone, Info, FileText, Newspaper, HelpCircle } from 'lucide-react';
+import { NavBar } from '../ui/tubelight-navbar';
 
 const Navbar = () => {
   const location = useLocation();
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const [prevScrollPos, setPrevScrollPos] = useState(window.pageYOffset);
-  const [visible, setVisible] = useState(true);
+  const navItems = useMemo(() => [
+    { name: 'Home', url: '/', icon: Home },
+    { name: 'Our Work', url: '/our-work', icon: Briefcase },
+    { name: 'Services', url: '/services', icon: FileText },
+    { name: 'Contact', url: '/contact', icon: Phone },
+  ], []);
 
-  const isHomePage = location.pathname === '/';
-  const textColor = isHomePage ? 'white' : '#003135';
+  const pages = useMemo(() => [
+    { label: 'Blog', url: '/blog-page', icon: Newspaper },
+    { label: 'FAQ', url: '/faq', icon: HelpCircle },
+    { label: 'About Us', url: '/about', icon: Info },
+  ], []);
 
-  const handleScroll = () => {
-    const currentScrollPos = window.pageYOffset;
-    setVisible(prevScrollPos > currentScrollPos || currentScrollPos < 10);
-    setPrevScrollPos(currentScrollPos);
-  };
+  const [isPagesOpen, setIsPagesOpen] = useState(false);
+  const dropdownRef = useRef(null);
 
   useEffect(() => {
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, [prevScrollPos, visible]);
-
-  const toggleMobileMenu = () => {
-    setIsMobileMenuOpen(!isMobileMenuOpen);
-  };
+    const handler = (e) => {
+      if (dropdownRef.current && !dropdownRef.current.contains(e.target)) {
+        setIsPagesOpen(false);
+      }
+    };
+    document.addEventListener('click', handler);
+    return () => document.removeEventListener('click', handler);
+  }, []);
 
   return (
-    <nav className={`navbar fixed-top bg-transparent ${visible ? '' : 'navbar-hidden'}`}>
-      <div className="container-fluid d-flex justify-content-between align-items-center">
-        <Link to="/" className="navbar-brand d-flex align-items-center" style={{ textDecoration: 'none', color: textColor, fontFamily: 'Inter, sans-serif', fontWeight: 700 }}>
+    <nav className="navbar fixed-top bg-transparent">
+      <div className="relative w-full flex items-center justify-center px-3 max-w-6xl mx-auto">
+        <Link
+          to="/"
+          className="navbar-brand md:flex items-center gap-2 hidden"
+          style={{ textDecoration: 'none', color: 'white', fontFamily: 'Inter, sans-serif', fontWeight: 700 }}
+        >
           <img src={Logo} alt="Logo" className="logo me-2" />
-          <span className="font-bold">Golden Eventz</span>
+          <span className="font-bold"></span>
         </Link>
-        <div className="d-none d-lg-flex align-items-center">
-          <ul className="navbar-nav d-flex flex-row gap-3">
-            <li className="nav-item">
-              <Link to="/about" className="nav-link" style={{ fontSize: '18px', fontWeight: 700, color: textColor, fontFamily: 'Inter, sans-serif' }}>About Us</Link>
-            </li>
-            <li className="nav-item">
-              <Link to="/our-work" className="nav-link" style={{ fontSize: '18px', fontWeight: 700, color: textColor, fontFamily: 'Inter, sans-serif' }}>Our Work</Link>
-            </li>
-            <li className="nav-item">
-              <Link to="/contact" className="nav-link" style={{ fontSize: '18px', fontWeight: 700, color: textColor, fontFamily: 'Inter, sans-serif' }}>Contact Us</Link>
-            </li>
-            <li className="nav-item">
-              <Link to="/services" className="nav-link" style={{ fontSize: '18px', fontWeight: 700, color: textColor, fontFamily: 'Inter, sans-serif' }}>Services</Link>
-            </li>
-            <li className="nav-item dropdown">
-              <a
-                className="nav-link dropdown-toggle"
-                href="#"
-                id="navbarDropdown"
-                role="button"
-                data-bs-toggle="dropdown"
-                aria-expanded="false"
-                style={{ fontSize: '18px', fontWeight: 700, color: textColor, fontFamily: 'Inter, sans-serif' }}
-              >
-                Pages
-              </a>
-              <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
-                {/* <li><Link to="/price-page" className="dropdown-item" style={{ fontSize: '18px', fontWeight: 'bold', color: '#003135' }}>Price Page</Link></li> */}
-                <li><Link to="/blog-page" className="dropdown-item" style={{ fontSize: '18px', fontWeight: 'bold', color: '#003135' }}>Blog Page</Link></li>
-                <li><Link to="/faq" className="dropdown-item" style={{ fontSize: '18px', fontWeight: 'bold', color: '#003135' }}>FAQ Page</Link></li>
-              </ul>
-            </li>
-          </ul>
+        <div className="md:flex-1 flex justify-center w-full">
+          <div className="max-w-4xl w-full flex justify-center">
+            <NavBar
+              items={navItems}
+              className="pointer-events-auto"
+              rightSlot={
+                <div className="relative" ref={dropdownRef}>
+                  <button
+                    className="text-white/85 font-semibold text-xs sm:text-sm px-3 py-2 hover:text-white transition whitespace-nowrap"
+                    onClick={() => setIsPagesOpen((prev) => !prev)}
+                  >
+                    Pages
+                  </button>
+                  {isPagesOpen && (
+                    <div className="absolute right-0 mt-2 w-36 sm:w-40 rounded-lg border border-white/15 bg-[#0f0f0f]/95 backdrop-blur-md shadow-lg py-2">
+                      {pages.map((p) => (
+                        <Link
+                          key={p.label}
+                          to={p.url}
+                          className="flex items-center gap-2 px-3 py-2 text-sm text-white/80 hover:text-white hover:bg-white/5"
+                          onClick={() => setIsPagesOpen(false)}
+                        >
+                          <p.icon size={16} strokeWidth={2} />
+                          <span>{p.label}</span>
+                        </Link>
+                      ))}
+                    </div>
+                  )}
+                </div>
+              }
+            />
+          </div>
         </div>
-        <button className="navbar-toggler d-lg-none" type="button" onClick={toggleMobileMenu} style={{ border: 'none', background: 'none' }}>
-          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" className="bi bi-list" viewBox="0 0 16 16" style={{ color: textColor }}>
-            <path fillRule="evenodd" d="M2.5 12.5a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zM2.5 4.5a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
-          </svg>
-        </button>
-      </div>
-      <div className={`d-lg-none position-fixed top-0 end-0 vh-100 w-100 ${isMobileMenuOpen ? 'show-menu' : 'hide-menu'}`} style={{
-          backgroundColor: 'rgba(0, 0, 0, 0.5)',
-          transition: 'transform 0.3s ease-out',
-          paddingTop: '58px',
-          color: textColor
-      }}>
-        <button onClick={toggleMobileMenu} style={{ position: 'absolute', top: '10px', left: '10px', border: 'none', background: 'none', color: textColor }}>
-          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" className="bi bi-x-lg" viewBox="0 0 16 16">
-            <path fillRule="evenodd" d="M1.646 1.646a.5.5 0 0 1 .708 0L8 7.293l5.646-5.647a.5.5 0 0 1 .708.708L8.707 8l5.647 5.646a.5.5 0 0 1-.708.708L8 8.707 2.354 14.354a.5.5 0 0 1-.708-.708L7.293 8 1.646 2.354a.5.5 0 0 1 0-.708z"/>
-          </svg>
-        </button>
-        <ul className="navbar-nav flex-column text-right p-3" style={{ position: 'absolute', right: '0', top: '58px', width: '100%' }}>
-          <li className="nav-item mb-2">
-            <Link to="/about" className="nav-link" style={{ fontSize: '18px', fontWeight: 700, color: textColor, fontFamily: 'Inter, sans-serif' }} onClick={() => setIsMobileMenuOpen(false)}>About Us</Link>
-          </li>
-          <li className="nav-item mb-2">
-            <Link to="/our-work" className="nav-link" style={{ fontSize: '18px', fontWeight: 700, color: textColor, fontFamily: 'Inter, sans-serif' }} onClick={() => setIsMobileMenuOpen(false)}>Our Work</Link>
-          </li>
-          <li className="nav-item mb-2">
-            <Link to="/contact" className="nav-link" style={{ fontSize: '18px', fontWeight: 700, color: textColor, fontFamily: 'Inter, sans-serif' }} onClick={() => setIsMobileMenuOpen(false)}>Contact Us</Link>
-          </li>
-          <li className="nav-item mb-2">
-            <Link to="/services" className="nav-link" style={{ fontSize: '18px', fontWeight: 700, color: textColor, fontFamily: 'Inter, sans-serif' }} onClick={() => setIsMobileMenuOpen(false)}>Services</Link>
-          </li>
-          {/* <li className="nav-item mb-2">
-            <Link to="/price-page" className="nav-link" style={{ fontSize: '18px', fontWeight: 'bold', color: textColor }} onClick={() => setIsMobileMenuOpen(false)}>Price Page</Link>
-          </li> */}
-          <li className="nav-item mb-2">
-            <Link to="/blog-page" className="nav-link" style={{ fontSize: '18px', fontWeight: 700, color: textColor, fontFamily: 'Inter, sans-serif' }} onClick={() => setIsMobileMenuOpen(false)}>Blog Page</Link>
-          </li>
-          <li className="nav-item mb-2">
-            <Link to="/faq" className="nav-link" style={{ fontSize: '18px', fontWeight: 700, color: textColor, fontFamily: 'Inter, sans-serif' }} onClick={() => setIsMobileMenuOpen(false)}>FAQ Page</Link>
-          </li>
-        </ul>
       </div>
     </nav>
   );
