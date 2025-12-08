@@ -31,7 +31,13 @@
 }
 
 .logo {
-  width: 62px; /* Slightly larger logo to match hero scale */
+  width: 72px; /* Bigger logo for desktop */
+}
+
+@media (max-width: 768px) {
+  .navbar-brand {
+    display: none !important;
+  }
 }
 
 .nav-link:hover {

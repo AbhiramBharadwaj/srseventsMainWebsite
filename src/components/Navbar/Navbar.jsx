@@ -38,13 +38,12 @@ const Navbar = () => {
       <div className="relative w-full flex items-center justify-center px-3 max-w-6xl mx-auto">
         <Link
           to="/"
-          className="navbar-brand md:flex items-center gap-2 hidden"
+          className="navbar-brand md:flex items-center gap-2 absolute left-3"
           style={{ textDecoration: 'none', color: 'white', fontFamily: 'Inter, sans-serif', fontWeight: 700 }}
         >
           <img src={Logo} alt="Logo" className="logo me-2" />
-          <span className="font-bold"></span>
         </Link>
-        <div className="md:flex-1 flex justify-center w-full">
+        <div className="flex-1 flex justify-center">
           <div className="max-w-4xl w-full flex justify-center">
             <NavBar
               items={navItems}
