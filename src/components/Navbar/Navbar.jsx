@@ -32,23 +32,23 @@ const Navbar = () => {
   return (
     <nav className={`navbar fixed-top bg-transparent ${visible ? '' : 'navbar-hidden'}`}>
       <div className="container-fluid d-flex justify-content-between align-items-center">
-        <Link to="/" className="navbar-brand d-flex align-items-center" style={{ textDecoration: 'none', color: textColor }}>
+        <Link to="/" className="navbar-brand d-flex align-items-center" style={{ textDecoration: 'none', color: textColor, fontFamily: 'Inter, sans-serif', fontWeight: 700 }}>
           <img src={Logo} alt="Logo" className="logo me-2" />
           <span className="font-bold">Golden Eventz</span>
         </Link>
         <div className="d-none d-lg-flex align-items-center">
           <ul className="navbar-nav d-flex flex-row gap-3">
             <li className="nav-item">
-              <Link to="/about" className="nav-link" style={{ fontSize: '18px', fontWeight: 'bold', color: textColor }}>About Us</Link>
+              <Link to="/about" className="nav-link" style={{ fontSize: '18px', fontWeight: 700, color: textColor, fontFamily: 'Inter, sans-serif' }}>About Us</Link>
             </li>
             <li className="nav-item">
-              <Link to="/our-work" className="nav-link" style={{ fontSize: '18px', fontWeight: 'bold', color: textColor }}>Our Work</Link>
+              <Link to="/our-work" className="nav-link" style={{ fontSize: '18px', fontWeight: 700, color: textColor, fontFamily: 'Inter, sans-serif' }}>Our Work</Link>
             </li>
             <li className="nav-item">
-              <Link to="/contact" className="nav-link" style={{ fontSize: '18px', fontWeight: 'bold', color: textColor }}>Contact Us</Link>
+              <Link to="/contact" className="nav-link" style={{ fontSize: '18px', fontWeight: 700, color: textColor, fontFamily: 'Inter, sans-serif' }}>Contact Us</Link>
             </li>
             <li className="nav-item">
-              <Link to="/services" className="nav-link" style={{ fontSize: '18px', fontWeight: 'bold', color: textColor }}>Services</Link>
+              <Link to="/services" className="nav-link" style={{ fontSize: '18px', fontWeight: 700, color: textColor, fontFamily: 'Inter, sans-serif' }}>Services</Link>
             </li>
             <li className="nav-item dropdown">
               <a
@@ -58,7 +58,7 @@ const Navbar = () => {
                 role="button"
                 data-bs-toggle="dropdown"
                 aria-expanded="false"
-                style={{ fontSize: '18px', fontWeight: 'bold', color: textColor }}
+                style={{ fontSize: '18px', fontWeight: 700, color: textColor, fontFamily: 'Inter, sans-serif' }}
               >
                 Pages
               </a>
@@ -89,25 +89,25 @@ const Navbar = () => {
         </button>
         <ul className="navbar-nav flex-column text-right p-3" style={{ position: 'absolute', right: '0', top: '58px', width: '100%' }}>
           <li className="nav-item mb-2">
-            <Link to="/about" className="nav-link" style={{ fontSize: '18px', fontWeight: 'bold', color: textColor }} onClick={() => setIsMobileMenuOpen(false)}>About Us</Link>
+            <Link to="/about" className="nav-link" style={{ fontSize: '18px', fontWeight: 700, color: textColor, fontFamily: 'Inter, sans-serif' }} onClick={() => setIsMobileMenuOpen(false)}>About Us</Link>
           </li>
           <li className="nav-item mb-2">
-            <Link to="/our-work" className="nav-link" style={{ fontSize: '18px', fontWeight: 'bold', color: textColor }} onClick={() => setIsMobileMenuOpen(false)}>Our Work</Link>
+            <Link to="/our-work" className="nav-link" style={{ fontSize: '18px', fontWeight: 700, color: textColor, fontFamily: 'Inter, sans-serif' }} onClick={() => setIsMobileMenuOpen(false)}>Our Work</Link>
           </li>
           <li className="nav-item mb-2">
-            <Link to="/contact" className="nav-link" style={{ fontSize: '18px', fontWeight: 'bold', color: textColor }} onClick={() => setIsMobileMenuOpen(false)}>Contact Us</Link>
+            <Link to="/contact" className="nav-link" style={{ fontSize: '18px', fontWeight: 700, color: textColor, fontFamily: 'Inter, sans-serif' }} onClick={() => setIsMobileMenuOpen(false)}>Contact Us</Link>
           </li>
           <li className="nav-item mb-2">
-            <Link to="/services" className="nav-link" style={{ fontSize: '18px', fontWeight: 'bold', color: textColor }} onClick={() => setIsMobileMenuOpen(false)}>Services</Link>
+            <Link to="/services" className="nav-link" style={{ fontSize: '18px', fontWeight: 700, color: textColor, fontFamily: 'Inter, sans-serif' }} onClick={() => setIsMobileMenuOpen(false)}>Services</Link>
           </li>
           {/* <li className="nav-item mb-2">
             <Link to="/price-page" className="nav-link" style={{ fontSize: '18px', fontWeight: 'bold', color: textColor }} onClick={() => setIsMobileMenuOpen(false)}>Price Page</Link>
           </li> */}
           <li className="nav-item mb-2">
-            <Link to="/blog-page" className="nav-link" style={{ fontSize: '18px', fontWeight: 'bold', color: textColor }} onClick={() => setIsMobileMenuOpen(false)}>Blog Page</Link>
+            <Link to="/blog-page" className="nav-link" style={{ fontSize: '18px', fontWeight: 700, color: textColor, fontFamily: 'Inter, sans-serif' }} onClick={() => setIsMobileMenuOpen(false)}>Blog Page</Link>
           </li>
           <li className="nav-item mb-2">
-            <Link to="/faq" className="nav-link" style={{ fontSize: '18px', fontWeight: 'bold', color: textColor }} onClick={() => setIsMobileMenuOpen(false)}>FAQ Page</Link>
+            <Link to="/faq" className="nav-link" style={{ fontSize: '18px', fontWeight: 700, color: textColor, fontFamily: 'Inter, sans-serif' }} onClick={() => setIsMobileMenuOpen(false)}>FAQ Page</Link>
           </li>
         </ul>
       </div>

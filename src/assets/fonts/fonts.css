@@ -2,7 +2,7 @@
 
 @font-face {
     font-family: 'AutumnInNovember';
-    src: url('/Users/abhiram/Documents/React JS App/my-project/src/assets/fonts/Autumn in November.ttf') format('truetype');
+    src: url('./Autumn in November.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
   }

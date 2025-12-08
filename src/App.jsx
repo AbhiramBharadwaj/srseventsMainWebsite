@@ -16,7 +16,6 @@ import FAQ from './pages/FAQ';
 import PricePage from './pages/PricePage';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-import BgVideo from './assets/earth-bg.mp4';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import useScrollDirection from './components/Navbar/useScrollDirection';
 
@@ -99,19 +98,7 @@ const HomePage = () => {
 
   return (
     <>
-      <div className="h-[700px] relative overflow-hidden">
-        <video
-          autoPlay
-          loop
-          muted
-          playsInline
-          className="absolute right-0 top-0 min-w-full min-h-full max-w-none object-cover z-[-1]"
-          style={{ width: '100%', height: '100%' }}
-        >
-          <source src={BgVideo} type="video/mp4" />
-        </video>
-        <Hero />
-      </div>
+      <Hero />
       <WhoWeAre />
       <HeroCard />
       <ReviewsSection />

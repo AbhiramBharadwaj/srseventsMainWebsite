@@ -1,138 +1,106 @@
-import React, { useRef, useEffect } from "react";
-import { gsap } from "gsap";
-import BackgroundImage from "../../assets/background.jpeg"; // Replace with the path of your uploaded image
-import WhoWeAre1 from "../../assets/WhoWeAre1.jpeg"; // Replace with the path of your uploaded image
-import WhoWeAre2 from "../../assets/WhoWeAre2.jpeg"; // Replace with the path of your uploaded image
-import WhoWeAre3 from "../../assets/WhoWeAre3.jpeg"; // Replace with the path of your uploaded image
-import './WhoWeAre.css'; // Ensure you have a CSS file for custom styles
+import React from "react";
+import "./WhoWeAre.css";
+import { CheckCircle2 } from "lucide-react";
+import WhoWeAre1 from "../../assets/WhoWeAre1.jpeg";
+import WhoWeAre2 from "../../assets/WhoWeAre2.jpeg";
+import WhoWeAre3 from "../../assets/WhoWeAre3.jpeg";
+import WhoWeAre4 from "../../assets/WhoWeAre4.png";
+
+
+const gallery = [
+  {
+    title: "Wedding Grandeur",
+    desc: "Custom rituals, bridal makeup, photo+video, and luxury floral stages.",
+    image: WhoWeAre4,
+    tag: "Weddings & Private",
+    items: [
+      "Bridal makeup & styling",
+      "Photo + video storytelling",
+      "Floral stage design",
+      "Ritual flow planning",
+    ],
+  },
+  {
+    title: "Corporate & Launches",
+    desc: "Executive staging, AV, guest flow, and hospitality managed end-to-end.",
+    image: WhoWeAre2,
+    tag: "Corporate & Launches",
+    items: [
+      "Executive staging & AV",
+      "Guest hospitality",
+      "MC & program flow",
+      "Launch decor",
+    ],
+  },
+  {
+    title: "Music & Sangeeth Nights",
+    desc: "Live bands, sangeeth choreography, immersive sound and lighting.",
+    image: WhoWeAre1,
+    tag: "Music & Sangeeth",
+    items: [
+      "Live bands & DJs",
+      "Sangeeth choreography",
+      "Immersive lighting",
+      "Pro sound systems",
+    ],
+  },
+];
 
 const WhoWeAre = () => {
-  const imagesRef = useRef([]);
-
-  useEffect(() => {
-    const images = imagesRef.current;
-
-    images.forEach((image) => {
-      if (image) {
-        image.addEventListener("mouseenter", () => {
-          gsap.to(image, {
-            scale: 1.1,
-            duration: 0.5,
-            ease: "power3.out",
-          });
-        });
-        image.addEventListener("mouseleave", () => {
-          gsap.to(image, {
-            scale: 1,
-            duration: 0.5,
-            ease: "power3.out",
-          });
-        });
-      }
-    });
-
-    return () => {
-      images.forEach((image) => {
-        if (image) {
-          image.removeEventListener("mouseenter", () => {
-            gsap.to(image, {
-              scale: 1.1,
-              duration: 0.5,
-              ease: "power3.out",
-            });
-          });
-          image.removeEventListener("mouseleave", () => {
-            gsap.to(image, {
-              scale: 1,
-              duration: 0.5,
-              ease: "power3.out",
-            });
-          });
-        }
-      });
-    };
-  }, []);
-
-  const splitText = (text) => {
-    return text.split("").map((char, index) => (
-      <span key={index} className={`letter inline-block ${char === ' ' ? 'mx-1' : ''}`}>
-        {char}
-      </span>
-    ));
-  };
-
   return (
-    <section
-      className="bg-black text-white py-16 relative"
-      style={{ backgroundImage: `url(${BackgroundImage})`, backgroundSize: 'cover', backgroundPosition: 'center' }}
-    >
-      <div className="container mx-auto text-center relative z-10">
-        <div className="relative inline-block mb-8">
-          <h2 className="text-5xl font-bold mb-8 relative z-10 custom-font">
-            {splitText("WHO ARE WE")}
+    <section className="relative overflow-hidden bg-[#030303] text-white py-20 md:py-24">
+      <div className="absolute inset-0">
+        <div className="absolute -left-10 top-10 h-64 w-64 rounded-full bg-indigo-500/10 blur-3xl" />
+        <div className="absolute right-0 top-1/3 h-72 w-72 rounded-full bg-rose-500/10 blur-3xl" />
+        <div className="absolute left-1/4 bottom-10 h-56 w-56 rounded-full bg-amber-500/10 blur-3xl" />
+      </div>
+
+      <div className="relative max-w-6xl mx-auto px-4 md:px-8">
+        <div className="text-center space-y-4 mb-12">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold leading-tight hero-font">
+            Who We Are
           </h2>
+          <p className="text-base md:text-lg text-white/60 max-w-3xl mx-auto">
+            Elegant event management from Shimoga to the metros—luxury decor,
+            flawless planning, and on-ground execution for weddings, corporate
+            gatherings, music nights, and private celebrations.
+          </p>
         </div>
-        <div className="flex flex-col lg:flex-row justify-around items-center mb-16">
-          <div className="lg:w-1/3 mb-8 lg:mb-0">
-            <p className="text-xl">
-              <strong className="font-semibold">Our mission</strong> is to craft state-of-the-art experiences with long term impact.
-            </p>
-          </div>
-          <div className="lg:w-1/3 mb-8 lg:mb-0">
-            <div className="w-px h-24 bg-gray-400 mx-auto"></div>
-          </div>
-          <div className="lg:w-1/3">
-            <p className="text-xl">
-              <strong className="font-semibold">Our vision</strong> is to progress the live entertainment industry and shape it for future generations.
-            </p>
-          </div>
-        </div>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          <div className="relative overflow-hidden group">
-            <img
-              ref={(el) => imagesRef.current[0] = el}
-              src={WhoWeAre3}
-              alt="Experience"
-              className="w-full h-full object-cover rounded-lg transition-transform duration-300 group-hover:scale-110"
-            />
-            <div className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center">
-              <div className="text-white text-center">
-                <h3 className="text-6xl font-bold">6</h3>
-                <p className="text-lg">YEARS OF EXPERIENCE</p>
+
+        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+          {gallery.map((item) => (
+            <article
+              key={item.title}
+              className="relative overflow-hidden rounded-3xl border border-white/10 bg-white/5 backdrop-blur-sm group aspect-square focus-within:ring-2 focus-within:ring-rose-300 transition-shadow"
+            >
+              <img
+                src={item.image}
+                alt={item.title}
+                className="absolute inset-0 h-full w-full object-cover opacity-90 group-hover:scale-105 transition-transform duration-700"
+                loading="lazy"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/45 to-black/15" />
+              <div className="relative p-4 md:p-5 flex flex-col gap-3 h-full">
+                <div className="inline-flex w-fit items-center gap-2 rounded-full bg-white/10 px-3 py-[6px] text-[10px] uppercase tracking-[0.12em] text-white/80 border border-white/15">
+                  {item.tag}
+                </div>
+                <div className="space-y-2">
+                  <h3 className="text-xl md:text-2xl font-semibold hero-font">{item.title}</h3>
+                  <p className="text-xs md:text-sm text-white/80 leading-relaxed">{item.desc}</p>
+                </div>
+                <ul className="mt-auto space-y-2 text-sm md:text-base text-white/95">
+                  {item.items.map((point) => (
+                    <li key={point} className="flex items-center gap-2 leading-tight">
+                      <CheckCircle2 className="h-4 w-4 md:h-5 md:w-5 text-rose-200 shrink-0" aria-hidden />
+                      <span>{point}</span>
+                    </li>
+                  ))}
+                </ul>
               </div>
-            </div>
-          </div>
-          <div className="relative overflow-hidden group">
-            <img
-              ref={(el) => imagesRef.current[1] = el}
-              src={WhoWeAre2}
-              alt="Events"
-              className="w-full h-full object-cover rounded-lg transition-transform duration-300 group-hover:scale-110"
-            />
-            <div className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center">
-              <div className="text-white text-center">
-                <h3 className="text-6xl font-bold">100+</h3>
-                <p className="text-lg">EVENTS PER YEAR</p>
-              </div>
-            </div>
-          </div>
-          <div className="relative overflow-hidden group">
-            <img
-              ref={(el) => imagesRef.current[2] = el}
-              src={WhoWeAre1}
-              alt="Professionals"
-              className="w-full h-full object-cover rounded-lg transition-transform duration-300 group-hover:scale-110"
-            />
-            <div className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center">
-              <div className="text-white text-center">
-                <h3 className="text-6xl font-bold">50+</h3>
-                <p className="text-lg">PROFESSIONALS</p>
-              </div>
-            </div>
-          </div>
+            </article>
+          ))}
         </div>
       </div>
-      <div className="absolute inset-0 bg-black opacity-50"></div>
     </section>
   );
 };

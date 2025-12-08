@@ -5,9 +5,9 @@
   right: 0;
   z-index: 1030;
   width: 100%;
-  background-color: transparent;
-  box-shadow: none !important; /* Ensuring no shadow is applied */
-  border-radius: 0 !important; /* Ensuring no rounded corners */
+  background-color: rgba(3, 3, 3, 0.9);
+  box-shadow: none !important;
+  border-radius: 0 !important;
   overflow: visible;
 }
 
@@ -23,8 +23,15 @@
   box-sizing: border-box;
 }
 
+.navbar-brand span,
+.nav-link,
+.dropdown-item {
+  font-family: "Inter", sans-serif;
+  font-weight: 700;
+}
+
 .logo {
-  width: 40px; /* Adjust size of logo if needed */
+  width: 62px; /* Slightly larger logo to match hero scale */
 }
 
 .nav-link:hover {
@@ -60,4 +67,3 @@
 .nav-item.dropdown {
   position: relative;
 }
-
