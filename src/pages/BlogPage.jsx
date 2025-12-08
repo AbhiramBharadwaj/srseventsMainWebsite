@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Container, Card, Row, Col } from 'react-bootstrap';
 import { useInView } from 'react-intersection-observer';
 import './BlogPage.css'; 
@@ -8,6 +8,7 @@ import image3 from '../assets/gifs/1.gif';
 import image4 from '../assets/OurWorkPagePhotos/24.png';
 import image5 from '../assets/OurWorkPagePhotos/25.png';
 import image6 from '../assets/OurWorkPagePhotos/26.png';
+import { setMeta } from '../utils/meta';
 
 const blogPosts = [
     {
@@ -56,6 +57,22 @@ const blogPosts = [
 
 function BlogPage() {
     const [expandedId, setExpandedId] = useState(null);
+
+    useEffect(() => {
+        setMeta({
+            title: "Golden Eventz Blog | Wedding, Corporate & Event Planning Insights",
+            description:
+                "Read Golden Eventz articles on luxury weddings, corporate launches, Sangeeth nights, tech-enabled events, sustainability, and decor trends across Shimoga, Bangalore, Mysore, and Mangalore.",
+            keywords: [
+                "event planning blog",
+                "wedding tips Golden Eventz",
+                "corporate event ideas Karnataka",
+                "Sangeeth night inspiration",
+                "event technology trends",
+                "sustainable event practices",
+            ],
+        });
+    }, []);
 
     const toggleExpand = (id) => {
         setExpandedId(expandedId === id ? null : id);

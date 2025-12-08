@@ -18,6 +18,7 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import useScrollDirection from './components/Navbar/useScrollDirection';
+import { setMeta } from './utils/meta';
 
 // Logger for route changes
 const RouteLogger = () => {
@@ -94,6 +95,19 @@ class ErrorBoundary extends React.Component {
 const HomePage = () => {
   useEffect(() => {
     logger.info('HomePage rendered');
+    setMeta({
+      title: "Golden Eventz & Production | Luxury Event Management Shimoga",
+      description:
+        "Golden Eventz delivers luxury weddings, corporate events, music nights, decor, AV, catering, and makeup across Shimoga, Bangalore, Mysore, and Mangalore with flawless planning and execution.",
+      keywords: [
+        "Golden Eventz",
+        "event management Shimoga",
+        "wedding planners Karnataka",
+        "corporate event planners",
+        "music nights and sangeeth",
+        "luxury decor and production",
+      ],
+    });
   }, []);
 
   return (

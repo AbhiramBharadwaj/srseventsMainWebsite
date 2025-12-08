@@ -1,7 +1,8 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Tab, Row, Col, Nav } from 'react-bootstrap';
 import { CSSTransition, TransitionGroup } from 'react-transition-group';
+import { setMeta } from '../utils/meta';
 
 // Import images
 import PlaceholderImage from '../assets/OurWorkPagePhotos/35.png';
@@ -40,6 +41,22 @@ const About = () => {
       description: "Ready to start planning your next event? Contact us today! Our dedicated team is eager to bring your vision to life with unmatched professionalism and creativity. Whether it's a corporate gathering, a private celebration, or a large-scale event, we promise to deliver a spectacular experience. Let’s discuss how we can make your upcoming event a resounding success. Call Us +91-7411820612 to know more.",
     },
   };
+
+  useEffect(() => {
+    setMeta({
+      title: "About Golden Eventz | Luxury Event Planners in Shimoga",
+      description:
+        "Discover Golden Eventz & Production—Shimoga’s luxury event planners delivering weddings, corporate launches, music nights, and bespoke celebrations with meticulous decor, AV, hospitality, and coordination.",
+      keywords: [
+        "Golden Eventz about",
+        "Shimoga event planners",
+        "luxury wedding planners Karnataka",
+        "corporate event management Shimoga",
+        "Sangeeth night planners",
+        "event decor and production",
+      ],
+    });
+  }, []);
 
   return (
     <>

@@ -1,12 +1,28 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Container, Row, Col, Form, Card } from 'react-bootstrap';
 import './PricePage.css'; // Ensure to include CSS for styling and animations
 import backgroundImage from '/src/assets/money.jpg';
+import { setMeta } from '../utils/meta';
 
 function PricePage() {
     const [numberOfPeople, setNumberOfPeople] = useState(50);
     const [eventType, setEventType] = useState('Wedding Events');
     const [duration, setDuration] = useState(4); // Duration in days
+
+    useEffect(() => {
+        setMeta({
+            title: "Pricing Calculator | Golden Eventz",
+            description:
+                "Estimate event costs with Golden Eventz. Get pricing for weddings, corporate events, themed parties, and decor packages in Shimoga, Bangalore, Mysore, and Mangalore.",
+            keywords: [
+                "Golden Eventz pricing",
+                "event cost calculator",
+                "wedding budget planner Shimoga",
+                "corporate event pricing",
+                "event packages Karnataka",
+            ],
+        });
+    }, []);
 
     const eventTypes = {
         'Haladi Event': 100,

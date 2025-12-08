@@ -1,4 +1,8 @@
 html, body {
     scroll-behavior: smooth;
   }
+
+.bg-gray-800 {
+  background-color: transparent;
+}
   

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { motion } from "framer-motion";
 import Image1 from "../assets/OurWorkPagePhotos/10.png";
@@ -13,6 +13,7 @@ import Image9 from "../assets/OurWorkPagePhotos/16.png";
 import Image10 from "../assets/OurWorkPagePhotos/38.png";
 
 import '../pages/OurWork.css';
+import { setMeta } from "../utils/meta";
 
 const projects = [
   {
@@ -114,6 +115,22 @@ const LampContainer = ({ children, className }) => (
 );
 
 const OurWork = () => {
+  useEffect(() => {
+    setMeta({
+      title: "Our Work | Golden Eventz Portfolio",
+      description:
+        "Browse Golden Eventz portfolio: luxury weddings, haldi, engagements, birthday parties, corporate shows, destination weddings, decor, sound & lighting across Shimoga, Bangalore, Mysore, and Mangalore.",
+      keywords: [
+        "Golden Eventz portfolio",
+        "Shimoga wedding decor examples",
+        "corporate event gallery",
+        "destination wedding planners work",
+        "sound and lighting projects",
+        "haldi and sangeeth events",
+      ],
+    });
+  }, []);
+
   return (
     <div className="min-h-screen bg-gray-100 p-8 pt-1">
       <LampContainer>

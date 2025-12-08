@@ -61,7 +61,7 @@ const WhoWeAre = () => {
             Who We Are
           </h2>
           <p className="text-base md:text-lg text-white/60 max-w-3xl mx-auto">
-            Elegant event management from Shimoga to the metros—luxury decor,
+            Golden eventz management from Shimoga to the metros—luxury decor,
             flawless planning, and on-ground execution for weddings, corporate
             gatherings, music nights, and private celebrations.
           </p>

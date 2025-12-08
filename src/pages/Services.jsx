@@ -9,6 +9,7 @@ import Image4 from "../assets/OurWorkPagePhotos/26.png";
 import Image5 from "../assets/OurWorkPagePhotos/18.png";
 import Image6 from "../assets/OurWorkPagePhotos/20.png";
 import Image7 from "../assets/OurWorkPagePhotos/21.png";
+import { setMeta } from '../utils/meta';
 
 const servicesData = [
   { title: 'Haldi Function', description: 'Make your Haladi ceremony vibrant and memorable with our unique decoration and event planning services.', image: Image1 },
@@ -22,6 +23,22 @@ const servicesData = [
 
 const Services = () => {
   const ref = useRef(null);
+
+  useEffect(() => {
+    setMeta({
+      title: "Event Services | Golden Eventz & Production",
+      description:
+        "Explore Golden Eventz services: haldi, weddings, receptions, themed parties, corporate events, baby showers, destination weddings, and custom decor across Shimoga, Bangalore, Mysore, and Mangalore.",
+      keywords: [
+        "Golden Eventz services",
+        "wedding decoration Shimoga",
+        "haldi decor planners",
+        "corporate event services Karnataka",
+        "destination wedding planners",
+        "theme parties and receptions",
+      ],
+    });
+  }, []);
 
   useEffect(() => {
     const observer = new IntersectionObserver(

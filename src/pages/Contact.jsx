@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { db } from '../firebase';  // Adjust this path if your firebase.js is located differently
 import { collection, addDoc } from 'firebase/firestore';
 import BackgroundImage from '../assets/Location1.png';
@@ -7,11 +7,28 @@ import { FaInstagram, FaWhatsapp, FaYoutube, FaFacebook, FaTwitter, FaLinkedin }
 import Lottie from 'react-lottie';
 import '../pages/Contact.css'; // Ensure your CSS is properly linked
 import animationData from '../assets/Animation/Animation.json';
+import { setMeta } from '../utils/meta';
 
 const Contact = () => {
   const [showMessage, setShowMessage] = useState(false);
   const [messageStatus, setMessageStatus] = useState('');
   const [isSubmitting, setIsSubmitting] = useState(false);
+
+  useEffect(() => {
+    setMeta({
+      title: "Contact Golden Eventz | Shimoga Event Planners",
+      description:
+        "Contact Golden Eventz & Production for weddings, corporate events, music nights, decor, makeup, catering, and AV in Shimoga, Bangalore, Mysore, and Mangalore. Call +91 7411820612 or email goldeneventmanagement.in@gmail.com.",
+      keywords: [
+        "contact Golden Eventz",
+        "event planners Shimoga contact",
+        "wedding planning inquiry",
+        "corporate events contact Karnataka",
+        "Golden Eventz phone",
+        "Golden Eventz email",
+      ],
+    });
+  }, []);
 
   const handleFormSubmit = async (event) => {
     event.preventDefault();

@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import { setMeta } from '../utils/meta';
 
 const FAQItem = ({ title, text, isOpen, onClick }) => {
   return (
@@ -47,6 +48,21 @@ const FAQItem = ({ title, text, isOpen, onClick }) => {
 
 const FAQ = () => {
   const [openIndex, setOpenIndex] = useState(null);
+
+  useEffect(() => {
+    setMeta({
+      title: "FAQ | Golden Eventz & Production",
+      description:
+        "Find answers about Golden Eventz services, pricing, destination events, promotion support, and coordination for weddings, corporate events, music nights, and private celebrations.",
+      keywords: [
+        "Golden Eventz FAQ",
+        "event planning questions",
+        "wedding planner FAQ",
+        "corporate event FAQ",
+        "Shimoga event services info",
+      ],
+    });
+  }, []);
 
   const handleToggle = (index) => {
     setOpenIndex(openIndex === index ? null : index);
