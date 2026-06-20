@@ -75,6 +75,7 @@ const App = () => {
         <Route path="/cancellation-and-refund" element={<CancellationAndRefund />} />
         <Route path="/shipping-and-delivery" element={<ShippingAndDelivery />} />
       </Routes>
+      <Footer5 />
     </Router>
   );
 };
@@ -124,7 +125,6 @@ const HomePage = () => {
       <WhoWeAre />
       <HeroCard />
       <ReviewsSection />
-      <Footer5 />
     </>
   );
 };

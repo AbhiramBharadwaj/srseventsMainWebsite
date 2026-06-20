@@ -81,8 +81,8 @@ const Footer5 = () => {
           <div className="space-y-4 px-4">
             <h1 className="text-xl font-bold">Important Links</h1>
             <ul className="space-y-2">
-              <li className="cursor-pointer" onClick={scrollToTop}>
-                Home
+              <li className="cursor-pointer">
+                <Link to="/" onClick={scrollToTop}>Home</Link>
               </li>
               <li className="cursor-pointer">
                 <Link to="/about">About Us</Link>
