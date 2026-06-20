@@ -81,9 +81,9 @@ const Footer5 = () => {
           <div className="space-y-4 px-4">
             <h1 className="text-xl font-bold">Important Links</h1>
             <ul className="space-y-2">
-            <li className="cursor-pointer" onClick={scrollToTop}>
-  Home
-</li>
+              <li className="cursor-pointer" onClick={scrollToTop}>
+                Home
+              </li>
               <li className="cursor-pointer">
                 <Link to="/about">About Us</Link>
               </li>
@@ -96,6 +96,18 @@ const Footer5 = () => {
               <li className="cursor-pointer">
                 <Link to="/contact">Contact Us</Link>
               </li>
+              <li className="cursor-pointer">
+                <Link to="/privacy-policy">Privacy Policy</Link>
+              </li>
+              <li className="cursor-pointer">
+                <Link to="/terms-and-conditions">Terms & Conditions</Link>
+              </li>
+              <li className="cursor-pointer">
+                <Link to="/cancellation-and-refund">Cancellation & Refund</Link>
+              </li>
+              <li className="cursor-pointer">
+                <Link to="/shipping-and-delivery">Shipping & Delivery</Link>
+              </li>
             </ul>
           </div>
 
@@ -105,15 +117,15 @@ const Footer5 = () => {
             <div className="space-y-2">
               <div className="flex items-center gap-3">
                 <HiLocationMarker />
-                <p>Shimoga, Karnataka</p>
+                <p>Shivamogga, Karnataka</p>
               </div>
               <div className="flex items-center gap-3">
                 <MdMessage />
-                <p>goldeneventmanagement.in@gmail.com</p>
+                <p>srseventofficials@gmail.com</p>
               </div>
               <div className="flex items-center gap-3">
                 <MdCall />
-                <p>+91 7411820612</p>
+                <p>+91 8660964776</p>
               </div>
             </div>
           </div>
@@ -130,9 +142,9 @@ const Footer5 = () => {
             </Tippy>
           </div>
           <div className="flex items-center gap-5 mt-4 sm:mt-0">
-            <a href="https://www.instagram.com/goldeneventz.co/"><FaInstagram className="text-2xl" /></a>
+            <a href="https://www.instagram.com/srs_prodsmg/"><FaInstagram className="text-2xl" /></a>
             <a href="https://www.youtube.com/watch?v=SYgAXOGn5m4"><FaYoutube className="text-2xl" /></a>
-            <a href="https://wa.me/7411820612?text=I'm%20interested%20to%20know%20more%20about%20Golden Eventz"><FaWhatsapp className="text-2xl" /></a>
+            <a href="https://wa.me/8660964776?text=I'm%20interested%20to%20know%20more%20about%20SRS%20Events%20and%20Productions"><FaWhatsapp className="text-2xl" /></a>
           </div>
           
         </div>

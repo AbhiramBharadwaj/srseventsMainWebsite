@@ -4,8 +4,8 @@ import { HeroGeometric } from "../ui/shape-landing-hero";
 const Hero = () => {
   return (
     <HeroGeometric
-      badge="Golden Eventz & Production"
-      title1="Golden Eventz, Detailed Execution"
+      badge="SRS Events and Productions"
+      title1="SRS Events, Detailed Execution"
       title2="Weddings • Corporate • Music Nights"
     />
   );

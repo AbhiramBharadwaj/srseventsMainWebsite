@@ -72,9 +72,9 @@ function ElegantShape({
 }
 
 function HeroGeometric({
-  badge = "Golden Eventz & Production",
+  badge = "SRS Events and Productions",
   title1 = "Luxury Events, Seamless Planning",
-  title2 = "Shimoga • Weddings • Corporate • Music",
+  title2 = "Shivamogga • Weddings • Corporate • Music",
 }: {
   badge?: string;
   title1?: string;
@@ -188,7 +188,7 @@ function HeroGeometric({
           >
             <p className="text-base sm:text-lg md:text-lg text-white/40 mb-8 leading-relaxed font-light tracking-wide max-w-xl mx-auto px-4">
               Full-service weddings, corporate events, music nights, and luxury
-              decor—tailored experiences across Shimoga, Bangalore, Mysore, and
+              decor tailored across Shivamogga, Bangalore, Mysore, and
               Mangalore with flawless execution.
             </p>
           </motion.div>

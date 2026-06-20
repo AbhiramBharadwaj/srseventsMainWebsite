@@ -18,7 +18,7 @@ const About = () => {
     mission: {
       title: "Our Story",
       image: PlaceholderImage,
-      description: "Golden Eventz started five years ago by organizing birthday parties. Over time, they grew and began managing big wedding events. Their journey from small birthday gatherings to grand weddings shows their dedication and growth in the event management industry.",
+      description: "SRS Events and Productions started five years ago by organizing birthday parties. Over time, the team grew and began managing large wedding events. Their journey from small birthday gatherings to grand weddings reflects consistent dedication and growth in event management.",
     },
     vision: {
       title: "Our Vision",
@@ -38,20 +38,20 @@ const About = () => {
     contact: {
       title: "Contact Us",
       image: PlaceholderImage4,
-      description: "Ready to start planning your next event? Contact us today! Our dedicated team is eager to bring your vision to life with unmatched professionalism and creativity. Whether it's a corporate gathering, a private celebration, or a large-scale event, we promise to deliver a spectacular experience. Let’s discuss how we can make your upcoming event a resounding success. Call Us +91-7411820612 to know more.",
+      description: "Ready to start planning your next event? Contact us today. Our dedicated team is eager to bring your vision to life with professionalism and creativity. Whether it's a corporate gathering, a private celebration, or a large-scale event, we promise to deliver a spectacular experience. Let’s discuss how we can make your upcoming event a resounding success. Call us at +91-8660964776 to know more.",
     },
   };
 
   useEffect(() => {
     setMeta({
-      title: "About Golden Eventz | Luxury Event Planners in Shimoga",
+      title: "About SRS Events and Productions | Wedding Planners in Shivamogga",
       description:
-        "Discover Golden Eventz & Production—Shimoga’s luxury event planners delivering weddings, corporate launches, music nights, and bespoke celebrations with meticulous decor, AV, hospitality, and coordination.",
+        "Discover SRS Events and Productions, Shivamogga’s event planning team for weddings, corporate launches, music nights, and bespoke celebrations with decor, AV, hospitality, and coordination.",
       keywords: [
-        "Golden Eventz about",
-        "Shimoga event planners",
-        "luxury wedding planners Karnataka",
-        "corporate event management Shimoga",
+        "SRS Events and Productions about",
+        "Shivamogga event planners",
+        "wedding planners Karnataka",
+        "corporate event management Shivamogga",
         "Sangeeth night planners",
         "event decor and production",
       ],

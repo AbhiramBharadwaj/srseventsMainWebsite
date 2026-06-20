@@ -26,12 +26,12 @@ const Services = () => {
 
   useEffect(() => {
     setMeta({
-      title: "Event Services | Golden Eventz & Production",
+      title: "Event Services | SRS Events and Productions",
       description:
-        "Explore Golden Eventz services: haldi, weddings, receptions, themed parties, corporate events, baby showers, destination weddings, and custom decor across Shimoga, Bangalore, Mysore, and Mangalore.",
+        "Explore SRS Events and Productions services: haldi, weddings, receptions, themed parties, corporate events, baby showers, destination weddings, and custom decor across Shivamogga, Bangalore, Mysore, and Mangalore.",
       keywords: [
-        "Golden Eventz services",
-        "wedding decoration Shimoga",
+        "SRS Events services",
+        "wedding decoration Shivamogga",
         "haldi decor planners",
         "corporate event services Karnataka",
         "destination wedding planners",

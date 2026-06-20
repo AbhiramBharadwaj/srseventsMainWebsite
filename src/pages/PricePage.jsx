@@ -11,13 +11,13 @@ function PricePage() {
 
     useEffect(() => {
         setMeta({
-            title: "Pricing Calculator | Golden Eventz",
+            title: "Pricing Calculator | SRS Events and Productions",
             description:
-                "Estimate event costs with Golden Eventz. Get pricing for weddings, corporate events, themed parties, and decor packages in Shimoga, Bangalore, Mysore, and Mangalore.",
+                "Estimate event costs with SRS Events and Productions. Get pricing for weddings, corporate events, themed parties, and decor packages in Shivamogga, Bangalore, Mysore, and Mangalore.",
             keywords: [
-                "Golden Eventz pricing",
+                "SRS Events pricing",
                 "event cost calculator",
-                "wedding budget planner Shimoga",
+                "wedding budget planner Shivamogga",
                 "corporate event pricing",
                 "event packages Karnataka",
             ],

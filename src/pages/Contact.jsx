@@ -3,7 +3,7 @@ import { db } from '../firebase';  // Adjust this path if your firebase.js is lo
 import { collection, addDoc } from 'firebase/firestore';
 import BackgroundImage from '../assets/Location1.png';
 import Location from '../assets/Location.png';
-import { FaInstagram, FaWhatsapp, FaYoutube, FaFacebook, FaTwitter, FaLinkedin } from "react-icons/fa"; // Added Facebook, Twitter, LinkedIn icons
+import { FaInstagram, FaWhatsapp, FaYoutube, FaFacebook, FaLinkedin } from "react-icons/fa";
 import Lottie from 'react-lottie';
 import '../pages/Contact.css'; // Ensure your CSS is properly linked
 import animationData from '../assets/Animation/Animation.json';
@@ -16,16 +16,16 @@ const Contact = () => {
 
   useEffect(() => {
     setMeta({
-      title: "Contact Golden Eventz | Shimoga Event Planners",
+      title: "Contact SRS Events and Productions | Shivamogga Event Planners",
       description:
-        "Contact Golden Eventz & Production for weddings, corporate events, music nights, decor, makeup, catering, and AV in Shimoga, Bangalore, Mysore, and Mangalore. Call +91 7411820612 or email goldeneventmanagement.in@gmail.com.",
+        "Contact SRS Events and Productions for weddings, corporate events, music nights, decor, makeup, catering, and AV in Shivamogga, Bangalore, Mysore, and Mangalore. Call +91 8660964776 or email srseventofficials@gmail.com.",
       keywords: [
-        "contact Golden Eventz",
-        "event planners Shimoga contact",
+        "contact SRS Events and Productions",
+        "event planners Shivamogga contact",
         "wedding planning inquiry",
         "corporate events contact Karnataka",
-        "Golden Eventz phone",
-        "Golden Eventz email",
+        "SRS Events phone",
+        "SRS Events email",
       ],
     });
   }, []);
@@ -107,17 +107,13 @@ const Contact = () => {
               <strong>Address:</strong> #102, Devaraj URS Extention, Kanaka Nagar, Shivamogga 577204
             </p>
             <p className="text-gray-700">
-              <strong>Phone:</strong> +91-7411820612
+              <strong>Phone:</strong> +91-8660964776
             </p>
             <p className="text-gray-700">
-              <strong>Email:</strong> goldeneventmanagement.in@gmail.com
+              <strong>Email:</strong> srseventofficials@gmail.com
             </p>
             <div className="social-media-links flex gap-4 mt-4">
-              <a href="https://www.facebook.com/profile.php?id=100091963924674&wtsid=rdr_0Li1FpSD1e1DlBKur" target="_blank" rel="noopener noreferrer"><FaFacebook className="text-2xl" /></a>
-              <a href="https://www.linkedin.com/in/golden-event-management-3409262b1/" target="_blank" rel="noopener noreferrer"><FaLinkedin className="text-2xl" /></a>
-              <a href="https://www.instagram.com/goldeneventz.co/" target="_blank" rel="noopener noreferrer"><FaInstagram className="text-2xl" /></a>
-              <a href="https://www.youtube.com/watch?v=SYgAXOGn5m4" target="_blank" rel="noopener noreferrer"><FaYoutube className="text-2xl" /></a>
-              <a href="https://wa.me/7411820612?text=I'm%20interested%20to%20know%20more%20about%20Golden Eventz" target="_blank" rel="noopener noreferrer"><FaWhatsapp className="text-2xl" /></a>
+              <a href="https://www.instagram.com/srs_prodsmg/" target="_blank" rel="noopener noreferrer"><FaInstagram className="text-2xl" /></a>
             </div>
             <div className="mt-8">
               <h3 className="text-xl font-semibold mb-4">Find Us Here</h3>
