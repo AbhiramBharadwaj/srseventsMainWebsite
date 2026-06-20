@@ -117,12 +117,12 @@ const LampContainer = ({ children, className }) => (
 const OurWork = () => {
   useEffect(() => {
     setMeta({
-      title: "Our Work | Golden Eventz Portfolio",
+      title: "Our Work | SRS Events and Productions Portfolio",
       description:
-        "Browse Golden Eventz portfolio: luxury weddings, haldi, engagements, birthday parties, corporate shows, destination weddings, decor, sound & lighting across Shimoga, Bangalore, Mysore, and Mangalore.",
+        "Browse SRS Events and Productions portfolio: weddings, haldi, engagements, birthday parties, corporate shows, destination weddings, decor, sound and lighting across Shivamogga, Bangalore, Mysore, and Mangalore.",
       keywords: [
-        "Golden Eventz portfolio",
-        "Shimoga wedding decor examples",
+        "SRS Events portfolio",
+        "Shivamogga wedding decor examples",
         "corporate event gallery",
         "destination wedding planners work",
         "sound and lighting projects",

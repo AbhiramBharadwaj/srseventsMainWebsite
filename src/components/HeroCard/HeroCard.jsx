@@ -177,7 +177,7 @@ const HeroCard = () => {
           </h2>
         </div>
         <p className="text-xl mb-12">
-          At Golden Eventz, we specialize in transforming ordinary occasions into unforgettable experiences. Our expertise lies in comprehensive event management, where creativity meets coordination to deliver exceptional results.
+          At SRS Events and Productions, we specialize in transforming ordinary occasions into unforgettable experiences. Our expertise lies in comprehensive event management, where creativity meets coordination to deliver exceptional results.
         </p>
         <div className="row">
           {WhatWeDoData.map((data, index) => (

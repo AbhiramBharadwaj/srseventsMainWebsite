@@ -51,15 +51,15 @@ const FAQ = () => {
 
   useEffect(() => {
     setMeta({
-      title: "FAQ | Golden Eventz & Production",
+      title: "FAQ | SRS Events and Productions",
       description:
-        "Find answers about Golden Eventz services, pricing, destination events, promotion support, and coordination for weddings, corporate events, music nights, and private celebrations.",
+        "Find answers about SRS Events and Productions services, pricing, destination events, promotion support, and coordination for weddings, corporate events, music nights, and private celebrations.",
       keywords: [
-        "Golden Eventz FAQ",
+        "SRS Events FAQ",
         "event planning questions",
         "wedding planner FAQ",
         "corporate event FAQ",
-        "Shimoga event services info",
+        "Shivamogga event services info",
       ],
     });
   }, []);
@@ -70,27 +70,27 @@ const FAQ = () => {
 
   const faqItems = [
     {
-      title: "What services does Golden Eventz offer?",
-      text: "Golden Eventz specializes in a wide range of event management services, including corporate events, weddings, private parties, and conference planning. We provide full-service planning, which covers everything from venue selection to post-event clean-up."
+      title: "What services does SRS Events and Productions offer?",
+      text: "SRS Events and Productions specializes in a wide range of event management services, including corporate events, weddings, private parties, and conference planning. We provide full-service planning, covering everything from venue selection to post-event clean-up."
     },
     {
-      title: "How do I start planning an event with Golden Eventz?",
-      text: "To begin planning your event with us, simply reach out via our contact form on our website or give us a call. One of our event coordinators will schedule an initial consultation to discuss your needs, budget, and vision for the event."
+      title: "How do I start planning an event with SRS Events and Productions?",
+      text: "To begin planning your event with us, simply reach out via our contact form on our website or give us a call at +91 8660964776. One of our event coordinators will schedule an initial consultation to discuss your needs, budget, and vision for the event."
     },
     {
-      title: "What is the average cost of hosting an event with Golden Eventz?",
+      title: "What is the average cost of hosting an event with SRS Events and Productions?",
       text: "The cost of event management services can vary widely based on the type of event, the number of guests, location, and specific services required. We offer customized quotes to fit every budget and event scale, ensuring you get the best value for your money."
     },
     {
-      title: "Does Golden Eventz provide services for destination events?",
+      title: "Does SRS Events and Productions provide services for destination events?",
       text: "Absolutely! We have extensive experience planning and executing events in various locations both domestically and internationally. We ensure seamless logistics, no matter where your event takes place."
     },
     {
-      title: "Can Golden Eventz help with event promotion?",
+      title: "Can SRS Events and Productions help with event promotion?",
       text: "Yes, we can assist with the promotion of your event. From digital marketing strategies to traditional advertising and public relations, we can manage all aspects of event promotion to ensure your event reaches its target audience."
     },
     {
-      title: "How can I provide feedback on the services received from Golden Eventz?",
+      title: "How can I provide feedback on the services received from SRS Events and Productions?",
       text: "Your feedback is invaluable to us. After the event, you will receive a feedback form via email, or you can directly provide your thoughts through our website. We strive to continuously improve our services based on the feedback we receive from our clients."
     },
   ];

@@ -15,6 +15,10 @@ import Services from './pages/Services';
 import FAQ from './pages/FAQ';
 import PricePage from './pages/PricePage';
 import AOS from 'aos';
+import PrivacyPolicy from './pages/PrivacyPolicy';
+import TermsAndConditions from './pages/TermsAndConditions';
+import CancellationAndRefund from './pages/CancellationAndRefund';
+import ShippingAndDelivery from './pages/ShippingAndDelivery';
 import 'aos/dist/aos.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import useScrollDirection from './components/Navbar/useScrollDirection';
@@ -66,6 +70,10 @@ const App = () => {
         <Route path="/faq" element={<FAQ />} />
         <Route path="/price-page" element={<PricePage />} />
         <Route path="/blog-page" element={<BlogPage />} />
+        <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+        <Route path="/terms-and-conditions" element={<TermsAndConditions />} />
+        <Route path="/cancellation-and-refund" element={<CancellationAndRefund />} />
+        <Route path="/shipping-and-delivery" element={<ShippingAndDelivery />} />
       </Routes>
     </Router>
   );
@@ -96,16 +104,16 @@ const HomePage = () => {
   useEffect(() => {
     logger.info('HomePage rendered');
     setMeta({
-      title: "Golden Eventz & Production | Luxury Event Management Shimoga",
+      title: "SRS Events and Productions | Wedding Planners in Shivamogga",
       description:
-        "Golden Eventz delivers luxury weddings, corporate events, music nights, decor, AV, catering, and makeup across Shimoga, Bangalore, Mysore, and Mangalore with flawless planning and execution.",
+        "SRS Events and Productions delivers wedding planning, corporate events, music nights, decor, AV, catering, and makeup across Shivamogga, Bangalore, Mysore, and Mangalore with flawless execution.",
       keywords: [
-        "Golden Eventz",
-        "event management Shimoga",
+        "SRS Events and Productions",
+        "wedding planners Shivamogga",
         "wedding planners Karnataka",
         "corporate event planners",
         "music nights and sangeeth",
-        "luxury decor and production",
+        "decor and production services",
       ],
     });
   }, []);

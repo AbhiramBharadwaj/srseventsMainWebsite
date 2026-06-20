@@ -23,7 +23,7 @@ const Rapidscat = () => {
                 New Year Event
               </h1>
               <p data-aos="fade-up" data-aos-delay="700">
-              Golden Beginnings: A Spectacular New Year's Celebration by GoldenEventz. Step into the new year with unparalleled grandeur and style at GoldenEventz's exclusive New Year's extravaganza. Prepare to be dazzled as we usher in the new year with a night of opulence, entertainment, and unparalleled hospitality.
+              Golden Beginnings: A Spectacular New Year's Celebration by SRS Events. Step into the new year with unparalleled grandeur and style at SRS Event's exclusive New Year's extravaganza. Prepare to be dazzled as we usher in the new year with a night of opulence, entertainment, and unparalleled hospitality.
               </p>
               <button
                 data-aos="fade-up"
